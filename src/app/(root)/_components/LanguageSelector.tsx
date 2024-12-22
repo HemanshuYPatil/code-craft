@@ -62,7 +62,7 @@ function LanguageSelector({ hasAccess }: { hasAccess: boolean }) {
             className="w-full h-full object-contain relative z-10"
           />
         </div>
-
+        
         <span className="text-gray-200 min-w-[80px] text-left group-hover:text-white transition-colors">
           {currentLanguageObj.label}
         </span>
@@ -89,7 +89,7 @@ function LanguageSelector({ hasAccess }: { hasAccess: boolean }) {
 
             <div className="max-h-[280px] overflow-y-auto overflow-x-hidden">
               {Object.values(LANGUAGE_CONFIG).map((lang, index) => {
-                const isLocked = !hasAccess && lang.id !== "javascript";
+                const isLocked = !hasAccess && lang.id !== "javascript" ;
 
                 return (
                   <motion.div

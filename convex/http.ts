@@ -3,6 +3,7 @@ import { httpAction } from "./_generated/server";
 import { Webhook } from "svix";
 import { WebhookEvent } from "@clerk/nextjs/server";
 import { api, internal } from "./_generated/api";
+import { redirect } from "next/navigation";
 
 const http = httpRouter();
 
@@ -34,7 +35,7 @@ http.route({
         });
 
         if (success) {
-          // optionally do anything here
+         redirect("/");
         }
       }
 
